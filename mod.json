@@ -1,0 +1,52 @@
+{
+	"geode": "5.7.1",
+	"gd": {
+		"win": "2.2081",
+		"mac": "2.2081",
+		"android": "2.2081",
+		"ios": "2.2081"
+	},
+	"version": "v2.0.0",
+	"id": "mifu.level_history",
+	"name": "Level History Revived",
+	"developers": ["Mifuu", "dogotrigger"],
+	"description": "Look and play through deleted and outdated levels using GDHistory! Revived and updated fork.",
+	"dependencies": [
+		{"id": "hjfod.gmd-api", "importance": "required", "version": ">=1.5.0"},
+		{"id": "geode.node-ids", "importance": "required", "version": ">=1.23.0"}
+	],
+	"links": {
+		"source": "https://github.com/SergeyMC9730/levelhistory"
+	},
+	"tags": ["online", "enhancement", "utility"],
+	"settings": {
+		"instance-url": {
+			"name": "Instance URL",
+			"description": "Base URL of the <cp>GDHistory</c> instance used by default. Can still be overridden at runtime from the provider settings page.",
+			"type": "string",
+			"default": "https://history.geometrydash.eu"
+		},
+		"request-timeout": {
+			"name": "Request timeout",
+			"description": "Maximum time (in <cy>seconds</c>) to wait for the GDHistory server before giving up.",
+			"type": "int",
+			"default": 15,
+			"min": 5,
+			"max": 60
+		},
+		"cache-ttl": {
+			"name": "Cache lifetime",
+			"description": "How long (in <cy>seconds</c>) API responses are kept in the session cache. Lower values give fresher data, higher values reduce server load. <cr>0 disables caching.</c>",
+			"type": "int",
+			"default": 180,
+			"min": 0,
+			"max": 3600
+		},
+		"show-date-estimation": {
+			"name": "Show estimated upload date",
+			"description": "After searching a level by ID, fetch and display GDHistory's <cg>estimated original upload date</c> for that level ID.",
+			"type": "bool",
+			"default": true
+		}
+	}
+}
